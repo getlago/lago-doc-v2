@@ -110,6 +110,12 @@
       ]
     },
     {
+      "group": "SDKs",
+      "pages": [
+        "api-reference/sdks"
+      ]
+    },
+    {
       "group": "API Reference",
       "pages": [
         "api-reference/intro",

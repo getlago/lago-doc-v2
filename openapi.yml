@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Lago API
-  version: ""
+  version: ''
 paths:
   /add_ons:
     post:
@@ -11,12 +11,12 @@ paths:
         - AddOns
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AddOn"
+                $ref: '#/components/schemas/AddOn'
               examples:
                 Example1:
                   value:
@@ -27,7 +27,7 @@ paths:
                       amount_cents: 5000
                       amount_currency: USD
                       description: description
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
       summary: Create a new add-on
       security: &ref_0
         - BearerAuth: []
@@ -36,7 +36,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AddOnInput"
+              $ref: '#/components/schemas/AddOnInput'
             examples:
               Example1:
                 value:
@@ -71,12 +71,12 @@ paths:
             Example1:
               value: 2
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AddOns"
+                $ref: '#/components/schemas/AddOns'
               examples:
                 Example1:
                   value:
@@ -87,7 +87,7 @@ paths:
                         amount_cents: 5000
                         amount_currency: USD
                         description: description
-                        created_at: "2022-04-29T08:59:51Z"
+                        created_at: '2022-04-29T08:59:51Z'
       summary: Find add-ons
       security: *ref_0
   /add_ons/{code}:
@@ -107,12 +107,12 @@ paths:
             Example1:
               value: code
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AddOn"
+                $ref: '#/components/schemas/AddOn'
               examples:
                 Example1:
                   value:
@@ -123,7 +123,7 @@ paths:
                       amount_cents: 5000
                       amount_currency: USD
                       description: description
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
       summary: Find add-on by code
       security: *ref_0
     put:
@@ -142,12 +142,12 @@ paths:
             Example1:
               value: code
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AddOn"
+                $ref: '#/components/schemas/AddOn'
               examples:
                 Example1:
                   value:
@@ -158,7 +158,7 @@ paths:
                       amount_cents: 5000
                       amount_currency: USD
                       description: description
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
       summary: Update an existing add-on
       security: *ref_0
       requestBody:
@@ -166,7 +166,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AddOnInput"
+              $ref: '#/components/schemas/AddOnInput'
             examples:
               Example1:
                 value:
@@ -192,12 +192,12 @@ paths:
             Example1:
               value: code
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AddOn"
+                $ref: '#/components/schemas/AddOn'
               examples:
                 Example1:
                   value:
@@ -208,7 +208,7 @@ paths:
                       amount_cents: 5000
                       amount_currency: USD
                       description: description
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
       summary: Delete an add-on
       security: *ref_0
   /applied_add_ons:
@@ -219,12 +219,12 @@ paths:
         - AddOns
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AppliedAddOn"
+                $ref: '#/components/schemas/AppliedAddOn'
               examples:
                 Example1:
                   value:
@@ -236,7 +236,7 @@ paths:
                       lago_customer_id: 99a6094e-199b-4101-896a-54e927ce7bd7
                       amount_cents: 123
                       amount_currency: EUR
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
       summary: Apply an add-on to a customer
       security: *ref_0
       requestBody:
@@ -247,7 +247,7 @@ paths:
               type: object
               properties:
                 applied_add_on:
-                  $ref: "#/components/schemas/AppliedAddOnInputObject"
+                  $ref: '#/components/schemas/AppliedAddOnInputObject'
             examples:
               Example1:
                 value:
@@ -264,12 +264,12 @@ paths:
         - BillableMetrics
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BillableMetric"
+                $ref: '#/components/schemas/BillableMetric'
               examples:
                 Example1:
                   value:
@@ -280,7 +280,7 @@ paths:
                       description: description
                       aggregation_type: sum_agg
                       field_name: amount_sum
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
                       group: {}
                       active_subscriptions_count: 0
                       draft_invoices_count: 0
@@ -291,7 +291,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/BillableMetricInput"
+              $ref: '#/components/schemas/BillableMetricInput'
             examples:
               Example1:
                 value:
@@ -332,12 +332,12 @@ paths:
             Example1:
               value: 2
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BillableMetrics"
+                $ref: '#/components/schemas/BillableMetrics'
               examples:
                 Example1:
                   value:
@@ -348,7 +348,7 @@ paths:
                         description: description
                         aggregation_type: sum_agg
                         field_name: amount_sum
-                        created_at: "2022-04-29T08:59:51Z"
+                        created_at: '2022-04-29T08:59:51Z'
                         group: {}
                         active_subscriptions_count: 0
                         draft_invoices_count: 0
@@ -371,12 +371,12 @@ paths:
             Example1:
               value: code
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BillableMetric"
+                $ref: '#/components/schemas/BillableMetric'
               examples:
                 Example1:
                   value:
@@ -387,7 +387,7 @@ paths:
                       description: description
                       aggregation_type: sum_agg
                       field_name: amount_sum
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
                       group: {}
                       active_subscriptions_count: 0
                       draft_invoices_count: 0
@@ -409,12 +409,12 @@ paths:
             Example1:
               value: code
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BillableMetric"
+                $ref: '#/components/schemas/BillableMetric'
               examples:
                 Example1:
                   value:
@@ -425,7 +425,7 @@ paths:
                       description: description
                       aggregation_type: sum_agg
                       field_name: amount_sum
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
                       group: {}
                       active_subscriptions_count: 0
                       draft_invoices_count: 0
@@ -436,7 +436,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/BillableMetricInput"
+              $ref: '#/components/schemas/BillableMetricInput'
             examples:
               Example1:
                 value:
@@ -468,12 +468,12 @@ paths:
             Example1:
               value: code
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BillableMetric"
+                $ref: '#/components/schemas/BillableMetric'
               examples:
                 Example1:
                   value:
@@ -484,7 +484,7 @@ paths:
                       description: description
                       aggregation_type: sum_agg
                       field_name: amount_sum
-                      created_at: "2022-04-29T08:59:51Z"
+                      created_at: '2022-04-29T08:59:51Z'
                       group: {}
                       active_subscriptions_count: 0
                       draft_invoices_count: 0
@@ -525,12 +525,12 @@ paths:
             Example1:
               value: 2
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Groups"
+                $ref: '#/components/schemas/Groups'
               examples:
                 Example1:
                   value:
@@ -548,12 +548,12 @@ paths:
         - Coupons
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Coupon"
+                $ref: '#/components/schemas/Coupon'
       summary: Create a new coupon
       security: *ref_0
       requestBody:
@@ -561,7 +561,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CouponInput"
+              $ref: '#/components/schemas/CouponInput'
     get:
       description: Find all coupons in certain organisation
       operationId: coupons_find
@@ -581,12 +581,12 @@ paths:
           schema:
             type: integer
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Coupons"
+                $ref: '#/components/schemas/Coupons'
       summary: Find Coupons
       security: *ref_0
   /coupons/{code}:
@@ -603,12 +603,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Coupon"
+                $ref: '#/components/schemas/Coupon'
       summary: Find coupon by code
       security: *ref_0
     put:
@@ -624,12 +624,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Coupon"
+                $ref: '#/components/schemas/Coupon'
       summary: Update an existing coupon
       security: *ref_0
       requestBody:
@@ -637,7 +637,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CouponInput"
+              $ref: '#/components/schemas/CouponInput'
     delete:
       description: Delete a coupon
       operationId: coupons_destroy
@@ -651,12 +651,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Coupon"
+                $ref: '#/components/schemas/Coupon'
       summary: Delete a coupon
       security: *ref_0
   /applied_coupons:
@@ -667,12 +667,12 @@ paths:
         - Coupons
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AppliedCoupon"
+                $ref: '#/components/schemas/AppliedCoupon'
       summary: Apply a coupon to a customer
       security: *ref_0
       requestBody:
@@ -680,7 +680,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AppliedCouponInput"
+              $ref: '#/components/schemas/AppliedCouponInput'
     get:
       description: Find all applied coupons
       operationId: coupons_findAllAppliedCoupons
@@ -704,7 +704,7 @@ paths:
           description: Applied coupon status
           required: false
           schema:
-            $ref: "#/components/schemas/CouponStatus"
+            $ref: '#/components/schemas/CouponStatus'
         - name: external_customer_id
           in: query
           description: External customer ID
@@ -712,12 +712,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AppliedCoupons"
+                $ref: '#/components/schemas/AppliedCoupons'
       summary: Find Applied Coupons
       security: *ref_0
   /credit_notes:
@@ -728,12 +728,12 @@ paths:
         - CreditNotes
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CreditNote"
+                $ref: '#/components/schemas/CreditNote'
       summary: Create a new Credit note
       security: *ref_0
       requestBody:
@@ -741,7 +741,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CreditNoteInput"
+              $ref: '#/components/schemas/CreditNoteInput'
     get:
       description: Find all credit notes in certain organisation
       operationId: creditNotes_find
@@ -767,12 +767,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CreditNotes"
+                $ref: '#/components/schemas/CreditNotes'
       summary: Find Credit notes
       security: *ref_0
   /credit_notes/{id}:
@@ -789,12 +789,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CreditNote"
+                $ref: '#/components/schemas/CreditNote'
       summary: Find credit note
       security: *ref_0
     put:
@@ -810,12 +810,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CreditNote"
+                $ref: '#/components/schemas/CreditNote'
       summary: Update an existing credit note
       security: *ref_0
       requestBody:
@@ -823,7 +823,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CreditNoteUpdateInput"
+              $ref: '#/components/schemas/CreditNoteUpdateInput'
   /credit_notes/{id}/download:
     post:
       description: Download an existing credit note
@@ -838,12 +838,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CreditNote"
+                $ref: '#/components/schemas/CreditNote'
       summary: Download an existing credit note
       security: *ref_0
   /credit_notes/{id}/void:
@@ -860,12 +860,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CreditNote"
+                $ref: '#/components/schemas/CreditNote'
       summary: Void existing credit note
       security: *ref_0
   /customers:
@@ -876,12 +876,12 @@ paths:
         - Customers
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Customer"
+                $ref: '#/components/schemas/Customer'
       summary: Create a customer
       security: *ref_0
       requestBody:
@@ -889,7 +889,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CustomerInput"
+              $ref: '#/components/schemas/CustomerInput'
     get:
       description: Find all customers in certain organisation
       operationId: customers_find
@@ -909,12 +909,12 @@ paths:
           schema:
             type: integer
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Customers"
+                $ref: '#/components/schemas/Customers'
       summary: Find customers
       security: *ref_0
   /customers/{external_id}:
@@ -931,12 +931,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Customer"
+                $ref: '#/components/schemas/Customer'
       summary: Find customer by external ID
       security: *ref_0
   /customers/{customer_external_id}/current_usage:
@@ -959,12 +959,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CustomerUsage"
+                $ref: '#/components/schemas/CustomerUsage'
       summary: Find customer current usage
       security: *ref_0
   /events:
@@ -975,8 +975,8 @@ paths:
         - Events
       parameters: []
       responses:
-        "204":
-          description: ""
+        '204':
+          description: ''
       summary: Create a new event
       security: *ref_0
       requestBody:
@@ -984,7 +984,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/EventInput"
+              $ref: '#/components/schemas/EventInput'
   /events/batch:
     post:
       description: Create batch events
@@ -993,8 +993,8 @@ paths:
         - Events
       parameters: []
       responses:
-        "204":
-          description: ""
+        '204':
+          description: ''
       summary: Create batch events
       security: *ref_0
       requestBody:
@@ -1002,7 +1002,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/BatchEventInput"
+              $ref: '#/components/schemas/BatchEventInput'
   /events/{id}:
     get:
       description: Return a single event
@@ -1017,12 +1017,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Event"
+                $ref: '#/components/schemas/Event'
       summary: Find event by transaction ID
       security: *ref_0
   /invoices/{id}:
@@ -1039,12 +1039,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: '#/components/schemas/Invoice'
       summary: Find invoice by ID
       security: *ref_0
     put:
@@ -1060,12 +1060,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: '#/components/schemas/Invoice'
       summary: Update an existing invoice status
       security: *ref_0
       requestBody:
@@ -1073,7 +1073,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/InvoiceInput"
+              $ref: '#/components/schemas/InvoiceInput'
   /invoices/{id}/download:
     post:
       description: Download an existing invoice
@@ -1088,12 +1088,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: '#/components/schemas/Invoice'
       summary: Download an existing invoice
       security: *ref_0
   /invoices/{id}/retry_payment:
@@ -1110,8 +1110,8 @@ paths:
           schema:
             type: string
       responses:
-        "204":
-          description: ""
+        '204':
+          description: ''
       summary: Retry invoice payment
       security: *ref_0
   /invoices/{id}/refresh:
@@ -1128,12 +1128,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: '#/components/schemas/Invoice'
       summary: Refresh a draft invoice
       security: *ref_0
   /invoices/{id}/finalize:
@@ -1150,12 +1150,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoice"
+                $ref: '#/components/schemas/Invoice'
       summary: Finalize a draft invoice
       security: *ref_0
   /invoices:
@@ -1196,14 +1196,14 @@ paths:
           in: query
           required: false
           schema:
-            $ref: "#/components/schemas/InvoiceStatus"
+            $ref: '#/components/schemas/InvoiceStatus'
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Invoices"
+                $ref: '#/components/schemas/Invoices'
       summary: Find all invoices
       security: *ref_0
   /organizations:
@@ -1214,12 +1214,12 @@ paths:
         - Organizations
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Organization"
+                $ref: '#/components/schemas/Organization'
       summary: Update an existing Organization
       security: *ref_0
       requestBody:
@@ -1227,7 +1227,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/OrganizationInput"
+              $ref: '#/components/schemas/OrganizationInput'
   /plans:
     post:
       description: Create a new plan
@@ -1236,12 +1236,12 @@ paths:
         - Plans
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Plan"
+                $ref: '#/components/schemas/Plan'
       summary: Create a new plan
       security: *ref_0
       requestBody:
@@ -1249,7 +1249,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PlanInput"
+              $ref: '#/components/schemas/PlanInput'
     get:
       description: Find all plans in certain organisation
       operationId: plans_find
@@ -1269,12 +1269,12 @@ paths:
           schema:
             type: integer
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Plans"
+                $ref: '#/components/schemas/Plans'
       summary: Find plans
       security: *ref_0
   /plans/{code}:
@@ -1291,12 +1291,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Plan"
+                $ref: '#/components/schemas/Plan'
       summary: Fin plan by code
       security: *ref_0
     put:
@@ -1312,12 +1312,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Plan"
+                $ref: '#/components/schemas/Plan'
       summary: Update an existing plan
       security: *ref_0
       requestBody:
@@ -1325,7 +1325,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PlanInput"
+              $ref: '#/components/schemas/PlanInput'
     delete:
       description: Delete a plan
       operationId: plans_destroy
@@ -1339,12 +1339,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Plan"
+                $ref: '#/components/schemas/Plan'
       summary: Delete a plan
       security: *ref_0
   /subscriptions:
@@ -1355,12 +1355,12 @@ paths:
         - Subscriptions
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Subscription"
+                $ref: '#/components/schemas/Subscription'
       summary: Assign a plan to a customer
       security: *ref_0
       requestBody:
@@ -1368,7 +1368,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/SubscriptionCreateInput"
+              $ref: '#/components/schemas/SubscriptionCreateInput'
     get:
       description: Find all suscriptions for certain customer
       operationId: subscriptions_find
@@ -1394,12 +1394,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Subscriptions"
+                $ref: '#/components/schemas/Subscriptions'
       summary: Find subscriptions
       security: *ref_0
   /subscriptions/{external_id}:
@@ -1416,12 +1416,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Subscription"
+                $ref: '#/components/schemas/Subscription'
       summary: Update an existing subscription
       security: *ref_0
       requestBody:
@@ -1429,7 +1429,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/SubscriptionUpdateInput"
+              $ref: '#/components/schemas/SubscriptionUpdateInput'
     delete:
       description: Terminate a subscription
       operationId: subscriptions_delete
@@ -1443,12 +1443,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Subscription"
+                $ref: '#/components/schemas/Subscription'
       summary: Terminate a subscription
       security: *ref_0
   /wallets:
@@ -1459,12 +1459,12 @@ paths:
         - Wallets
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Wallet"
+                $ref: '#/components/schemas/Wallet'
       summary: Create a new wallet
       security: *ref_0
       requestBody:
@@ -1472,7 +1472,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/WalletInput"
+              $ref: '#/components/schemas/WalletInput'
     get:
       description: Find all wallets for certain customer
       operationId: wallets_find
@@ -1498,12 +1498,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Wallets"
+                $ref: '#/components/schemas/Wallets'
       summary: Find wallets
       security: *ref_0
   /wallets/{id}:
@@ -1520,12 +1520,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Wallet"
+                $ref: '#/components/schemas/Wallet'
       summary: Find wallet
       security: *ref_0
     put:
@@ -1541,12 +1541,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Wallet"
+                $ref: '#/components/schemas/Wallet'
       summary: Update an existing wallet
       security: *ref_0
       requestBody:
@@ -1554,7 +1554,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/WalletUpdateInput"
+              $ref: '#/components/schemas/WalletUpdateInput'
     delete:
       description: Delete a wallet
       operationId: wallets_destroy
@@ -1568,12 +1568,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Wallet"
+                $ref: '#/components/schemas/Wallet'
       summary: Delete a wallet
       security: *ref_0
   /wallet_transactions:
@@ -1584,12 +1584,12 @@ paths:
         - Wallets
       parameters: []
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/WalletTransactions"
+                $ref: '#/components/schemas/WalletTransactions'
       summary: Create a new wallet transaction
       security: *ref_0
       requestBody:
@@ -1597,7 +1597,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/WalletTransactionInput"
+              $ref: '#/components/schemas/WalletTransactionInput'
   /wallets/{id}/wallet_transactions:
     get:
       description: Find all wallet transactions for certain wallet
@@ -1636,12 +1636,12 @@ paths:
           schema:
             type: string
       responses:
-        "200":
-          description: ""
+        '200':
+          description: ''
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/WalletTransactions"
+                $ref: '#/components/schemas/WalletTransactions'
       summary: Find wallet transactions
       security: *ref_0
 components:
@@ -1652,7 +1652,7 @@ components:
         add_ons:
           type: array
           items:
-            $ref: "#/components/schemas/AddOnObject"
+            $ref: '#/components/schemas/AddOnObject'
     AppliedAddOnInputObject:
       type: object
       properties:
@@ -1668,7 +1668,7 @@ components:
       type: object
       properties:
         add_on:
-          $ref: "#/components/schemas/AddOnInputObject"
+          $ref: '#/components/schemas/AddOnInputObject'
     AddOnInputObject:
       type: object
       properties:
@@ -1686,7 +1686,7 @@ components:
       type: object
       properties:
         add_on:
-          $ref: "#/components/schemas/AddOnObject"
+          $ref: '#/components/schemas/AddOnObject'
     AddOnObject:
       type: object
       properties:
@@ -1708,7 +1708,7 @@ components:
       type: object
       properties:
         applied_add_on:
-          $ref: "#/components/schemas/AppliedAddOnObject"
+          $ref: '#/components/schemas/AppliedAddOnObject'
     AppliedAddOnObject:
       type: object
       properties:
@@ -1734,14 +1734,14 @@ components:
         billable_metrics:
           type: array
           items:
-            $ref: "#/components/schemas/BillableMetricObject"
+            $ref: '#/components/schemas/BillableMetricObject'
     Groups:
       type: object
       properties:
         groups:
           type: array
           items:
-            $ref: "#/components/schemas/GroupObject"
+            $ref: '#/components/schemas/GroupObject'
     GroupObject:
       type: object
       properties:
@@ -1755,7 +1755,7 @@ components:
       type: object
       properties:
         billable_metric:
-          $ref: "#/components/schemas/BillableMetricInputObject"
+          $ref: '#/components/schemas/BillableMetricInputObject'
     BillableMetricInputObject:
       type: object
       properties:
@@ -1768,14 +1768,14 @@ components:
         field_name:
           type: string
         aggregation_type:
-          $ref: "#/components/schemas/AggregationType"
+          $ref: '#/components/schemas/AggregationType'
         group:
-          $ref: "#/components/schemas/BillableMetricGroup"
+          $ref: '#/components/schemas/BillableMetricGroup'
     BillableMetric:
       type: object
       properties:
         billable_metric:
-          $ref: "#/components/schemas/BillableMetricObject"
+          $ref: '#/components/schemas/BillableMetricObject'
     BillableMetricGroup:
       type: object
       properties:
@@ -1800,9 +1800,9 @@ components:
         field_name:
           type: string
         aggregation_type:
-          $ref: "#/components/schemas/AggregationType"
+          $ref: '#/components/schemas/AggregationType'
         group:
-          $ref: "#/components/schemas/BillableMetricGroup"
+          $ref: '#/components/schemas/BillableMetricGroup'
         active_subscriptions_count:
           type: integer
         draft_invoices_count:
@@ -1833,12 +1833,12 @@ components:
         events_count:
           type: integer
         item:
-          $ref: "#/components/schemas/FeeItem"
+          $ref: '#/components/schemas/FeeItem'
     FeeItem:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/BillingTime"
+          $ref: '#/components/schemas/BillingTime'
         code:
           type: string
         name:
@@ -1857,12 +1857,12 @@ components:
         coupons:
           type: array
           items:
-            $ref: "#/components/schemas/CouponObject"
+            $ref: '#/components/schemas/CouponObject'
     AppliedCouponInput:
       type: object
       properties:
         applied_coupon:
-          $ref: "#/components/schemas/AppliedCouponInputObject"
+          $ref: '#/components/schemas/AppliedCouponInputObject'
     AppliedCouponInputObject:
       type: object
       properties:
@@ -1871,7 +1871,7 @@ components:
         coupon_code:
           type: string
         frequency:
-          $ref: "#/components/schemas/FrequencyType"
+          $ref: '#/components/schemas/FrequencyType'
         frequency_duration:
           type: integer
         amount_cents:
@@ -1885,14 +1885,14 @@ components:
       type: object
       properties:
         applied_coupon:
-          $ref: "#/components/schemas/AppliedCouponObject"
+          $ref: '#/components/schemas/AppliedCouponObject'
     AppliedCoupons:
       type: object
       properties:
         applied_coupons:
           type: array
           items:
-            $ref: "#/components/schemas/AppliedCouponObject"
+            $ref: '#/components/schemas/AppliedCouponObject'
     CouponStatus:
       type: string
       enum:
@@ -1902,7 +1902,7 @@ components:
       type: object
       properties:
         coupon:
-          $ref: "#/components/schemas/CouponInputObject"
+          $ref: '#/components/schemas/CouponInputObject'
     CouponType:
       type: string
       enum:
@@ -1926,7 +1926,7 @@ components:
         code:
           type: string
         coupon_type:
-          $ref: "#/components/schemas/CouponType"
+          $ref: '#/components/schemas/CouponType'
         amount_cents:
           type: integer
         amount_currency:
@@ -1937,18 +1937,18 @@ components:
           type: number
           format: double
         frequency:
-          $ref: "#/components/schemas/FrequencyType"
+          $ref: '#/components/schemas/FrequencyType'
         frequency_duration:
           type: integer
         expiration_at:
           type: string
         expiration:
-          $ref: "#/components/schemas/ExpirationType"
+          $ref: '#/components/schemas/ExpirationType'
     Coupon:
       type: object
       properties:
         coupon:
-          $ref: "#/components/schemas/CouponObject"
+          $ref: '#/components/schemas/CouponObject'
     CouponObject:
       type: object
       properties:
@@ -1959,7 +1959,7 @@ components:
         code:
           type: string
         coupon_type:
-          $ref: "#/components/schemas/CouponType"
+          $ref: '#/components/schemas/CouponType'
         amount_cents:
           type: integer
         amount_currency:
@@ -1972,13 +1972,13 @@ components:
           type: number
           format: double
         frequency:
-          $ref: "#/components/schemas/FrequencyType"
+          $ref: '#/components/schemas/FrequencyType'
         frequency_duration:
           type: integer
         expiration_at:
           type: string
         expiration:
-          $ref: "#/components/schemas/ExpirationType"
+          $ref: '#/components/schemas/ExpirationType'
     AppliedCouponObject:
       type: object
       properties:
@@ -1993,7 +1993,7 @@ components:
         external_customer_id:
           type: string
         status:
-          $ref: "#/components/schemas/CouponStatus"
+          $ref: '#/components/schemas/CouponStatus'
         amount_cents:
           type: integer
         amount_cents_remaining:
@@ -2004,7 +2004,7 @@ components:
           type: number
           format: double
         frequency:
-          $ref: "#/components/schemas/FrequencyType"
+          $ref: '#/components/schemas/FrequencyType'
         frequency_duration:
           type: integer
         frequency_duration_remaining:
@@ -2019,7 +2019,7 @@ components:
       type: object
       properties:
         credit_note:
-          $ref: "#/components/schemas/CreditNoteInputObject"
+          $ref: '#/components/schemas/CreditNoteInputObject'
     CreditNoteReason:
       type: string
       enum:
@@ -2042,7 +2042,7 @@ components:
         invoice_id:
           type: string
         reason:
-          $ref: "#/components/schemas/CreditNoteReason"
+          $ref: '#/components/schemas/CreditNoteReason'
         description:
           type: string
         credit_amount_cents:
@@ -2052,24 +2052,24 @@ components:
         items:
           type: array
           items:
-            $ref: "#/components/schemas/CreditNoteItem"
+            $ref: '#/components/schemas/CreditNoteItem'
     CreditNoteUpdateInput:
       type: object
       properties:
         credit_note:
-          $ref: "#/components/schemas/CreditNoteInputObject"
+          $ref: '#/components/schemas/CreditNoteInputObject'
     CreditNotes:
       type: object
       properties:
         credit_notes:
           type: array
           items:
-            $ref: "#/components/schemas/CreditNoteObject"
+            $ref: '#/components/schemas/CreditNoteObject'
     CreditNote:
       type: object
       properties:
         credit_note:
-          $ref: "#/components/schemas/CreditNoteObject"
+          $ref: '#/components/schemas/CreditNoteObject'
     CreditNoteObject:
       type: object
       properties:
@@ -2086,11 +2086,11 @@ components:
         issuing_date:
           type: string
         credit_status:
-          $ref: "#/components/schemas/CreditStatus"
+          $ref: '#/components/schemas/CreditStatus'
         refund_status:
-          $ref: "#/components/schemas/RefundStatus"
+          $ref: '#/components/schemas/RefundStatus'
         reason:
-          $ref: "#/components/schemas/CreditReason"
+          $ref: '#/components/schemas/CreditReason'
         description:
           type: string
         total_amount_cents:
@@ -2124,11 +2124,11 @@ components:
         file_url:
           type: string
         customer:
-          $ref: "#/components/schemas/CustomerObject"
+          $ref: '#/components/schemas/CustomerObject'
         items:
           type: array
           items:
-            $ref: "#/components/schemas/CreditNoteItemObject"
+            $ref: '#/components/schemas/CreditNoteItemObject'
     CreditStatus:
       type: string
       enum:
@@ -2160,12 +2160,12 @@ components:
         amount_currency:
           type: string
         fee:
-          $ref: "#/components/schemas/FeeObject"
+          $ref: '#/components/schemas/FeeObject'
     CustomerInput:
       type: object
       properties:
         customer:
-          $ref: "#/components/schemas/CustomerInputObject"
+          $ref: '#/components/schemas/CustomerInputObject'
     CustomerInputObject:
       type: object
       properties:
@@ -2202,24 +2202,24 @@ components:
         timezone:
           type: string
         billing_configuration:
-          $ref: "#/components/schemas/BillingConfigurationCustomer"
+          $ref: '#/components/schemas/BillingConfigurationCustomer'
     CustomerUsage:
       type: object
       properties:
         customer_usage:
-          $ref: "#/components/schemas/CustomerUsageObject"
+          $ref: '#/components/schemas/CustomerUsageObject'
     Customers:
       type: object
       properties:
         customers:
           type: array
           items:
-            $ref: "#/components/schemas/CustomerObject"
+            $ref: '#/components/schemas/CustomerObject'
     Customer:
       type: object
       properties:
         customer:
-          $ref: "#/components/schemas/CustomerObject"
+          $ref: '#/components/schemas/CustomerObject'
     BillingConfigurationCustomer:
       type: object
       additionalProperties: {}
@@ -2269,7 +2269,7 @@ components:
         applicable_timezone:
           type: string
         billing_configuration:
-          $ref: "#/components/schemas/BillingConfigurationCustomer"
+          $ref: '#/components/schemas/BillingConfigurationCustomer'
     CustomerUsageObject:
       type: object
       properties:
@@ -2294,7 +2294,7 @@ components:
         charges_usage:
           type: array
           items:
-            $ref: "#/components/schemas/ChargeUsageObject"
+            $ref: '#/components/schemas/ChargeUsageObject'
     ChargeUsageObject:
       type: object
       properties:
@@ -2306,13 +2306,13 @@ components:
         amount_currency:
           type: string
         charge:
-          $ref: "#/components/schemas/Charge"
+          $ref: '#/components/schemas/Charge'
         billable_metric:
-          $ref: "#/components/schemas/ChargeBillableMetric"
+          $ref: '#/components/schemas/ChargeBillableMetric'
         groups:
           type: array
           items:
-            $ref: "#/components/schemas/Group"
+            $ref: '#/components/schemas/Group'
     ChargeModelType:
       type: string
       enum:
@@ -2327,7 +2327,7 @@ components:
         lago_id:
           type: string
         charge_model:
-          $ref: "#/components/schemas/ChargeModelType"
+          $ref: '#/components/schemas/ChargeModelType'
           description: Charge model type
     ChargeBillableMetric:
       type: object
@@ -2339,7 +2339,7 @@ components:
         code:
           type: string
         aggregation_type:
-          $ref: "#/components/schemas/AggregationType"
+          $ref: '#/components/schemas/AggregationType'
     Group:
       type: object
       properties:
@@ -2358,7 +2358,7 @@ components:
       type: object
       properties:
         event:
-          $ref: "#/components/schemas/EventInputObject"
+          $ref: '#/components/schemas/EventInputObject'
     EventInputObject:
       type: object
       properties:
@@ -2379,7 +2379,7 @@ components:
       type: object
       properties:
         event:
-          $ref: "#/components/schemas/BatchEventInputObject"
+          $ref: '#/components/schemas/BatchEventInputObject'
     BatchEventInputObject:
       type: object
       properties:
@@ -2402,7 +2402,7 @@ components:
       type: object
       properties:
         event:
-          $ref: "#/components/schemas/EventObject"
+          $ref: '#/components/schemas/EventObject'
     EventObject:
       type: object
       properties:
@@ -2431,19 +2431,19 @@ components:
       type: object
       properties:
         invoice:
-          $ref: "#/components/schemas/InvoiceObject"
+          $ref: '#/components/schemas/InvoiceObject'
     Invoices:
       type: object
       properties:
         invoices:
           type: array
           items:
-            $ref: "#/components/schemas/InvoiceObject"
+            $ref: '#/components/schemas/InvoiceObject'
     Invoice:
       type: object
       properties:
         invoice:
-          $ref: "#/components/schemas/InvoiceObject"
+          $ref: '#/components/schemas/InvoiceObject'
     InvoiceObject:
       type: object
       properties:
@@ -2456,11 +2456,11 @@ components:
         issuing_date:
           type: string
         invoice_type:
-          $ref: "#/components/schemas/InvoiceType"
+          $ref: '#/components/schemas/InvoiceType'
         status:
-          $ref: "#/components/schemas/InvoiceStatus"
+          $ref: '#/components/schemas/InvoiceStatus'
         payment_status:
-          $ref: "#/components/schemas/PaymentStatus"
+          $ref: '#/components/schemas/PaymentStatus'
         amount_cents:
           type: integer
         amount_currency:
@@ -2482,19 +2482,19 @@ components:
         file_url:
           type: string
         customer:
-          $ref: "#/components/schemas/CustomerObject"
+          $ref: '#/components/schemas/CustomerObject'
         subscriptions:
           type: array
           items:
-            $ref: "#/components/schemas/SubscriptionObject"
+            $ref: '#/components/schemas/SubscriptionObject'
         fees:
           type: array
           items:
-            $ref: "#/components/schemas/FeeObject"
+            $ref: '#/components/schemas/FeeObject'
         credits:
           type: array
           items:
-            $ref: "#/components/schemas/CreditObject"
+            $ref: '#/components/schemas/CreditObject'
     InvoiceStatus:
       type: string
       enum:
@@ -2523,7 +2523,7 @@ components:
         amount_currency:
           type: string
         item:
-          $ref: "#/components/schemas/CreditItem"
+          $ref: '#/components/schemas/CreditItem'
     CreditItem:
       type: object
       properties:
@@ -2539,7 +2539,7 @@ components:
       type: object
       properties:
         organization:
-          $ref: "#/components/schemas/OrganizationInputObject"
+          $ref: '#/components/schemas/OrganizationInputObject'
     OrganizationInputObject:
       type: object
       properties:
@@ -2566,12 +2566,12 @@ components:
         timezone:
           type: string
         billing_configuration:
-          $ref: "#/components/schemas/BillingConfigurationOrganization"
+          $ref: '#/components/schemas/BillingConfigurationOrganization'
     Organization:
       type: object
       properties:
         organization:
-          $ref: "#/components/schemas/OrganizationObject"
+          $ref: '#/components/schemas/OrganizationObject'
     OrganizationObject:
       type: object
       properties:
@@ -2604,7 +2604,7 @@ components:
         timezone:
           type: string
         billing_configuration:
-          $ref: "#/components/schemas/BillingConfigurationOrganization"
+          $ref: '#/components/schemas/BillingConfigurationOrganization'
     BillingConfigurationOrganization:
       type: object
       properties:
@@ -2621,7 +2621,7 @@ components:
         plans:
           type: array
           items:
-            $ref: "#/components/schemas/PlanObject"
+            $ref: '#/components/schemas/PlanObject'
     PlanInputObject:
       type: object
       properties:
@@ -2630,7 +2630,7 @@ components:
         code:
           type: string
         interval:
-          $ref: "#/components/schemas/PlanInterval"
+          $ref: '#/components/schemas/PlanInterval'
           description: Plan interval
         description:
           type: string
@@ -2648,12 +2648,12 @@ components:
         charges:
           type: array
           items:
-            $ref: "#/components/schemas/Charges"
+            $ref: '#/components/schemas/Charges'
     Plan:
       type: object
       properties:
         plan:
-          $ref: "#/components/schemas/PlanObject"
+          $ref: '#/components/schemas/PlanObject'
     PlanObject:
       type: object
       properties:
@@ -2666,7 +2666,7 @@ components:
         code:
           type: string
         interval:
-          $ref: "#/components/schemas/PlanInterval"
+          $ref: '#/components/schemas/PlanInterval'
         description:
           type: string
         amount_cents:
@@ -2683,7 +2683,7 @@ components:
         charges:
           type: array
           items:
-            $ref: "#/components/schemas/ChargeObject"
+            $ref: '#/components/schemas/ChargeObject'
     ChargeObject:
       type: object
       properties:
@@ -2694,14 +2694,14 @@ components:
         created_at:
           type: string
         charge_model:
-          $ref: "#/components/schemas/ChargeModelType"
+          $ref: '#/components/schemas/ChargeModelType'
         properties:
           type: object
           additionalProperties: {}
         group_properties:
           type: array
           items:
-            $ref: "#/components/schemas/GroupPropertiesObject"
+            $ref: '#/components/schemas/GroupPropertiesObject'
     GroupPropertiesObject:
       type: object
       properties:
@@ -2714,7 +2714,7 @@ components:
       type: object
       properties:
         plan:
-          $ref: "#/components/schemas/PlanInputObject"
+          $ref: '#/components/schemas/PlanInputObject'
     PlanInterval:
       type: string
       enum:
@@ -2745,19 +2745,19 @@ components:
         billable_metric_id:
           type: string
         charge_model:
-          $ref: "#/components/schemas/ChargeModel"
+          $ref: '#/components/schemas/ChargeModel'
         properties:
           type: object
           additionalProperties: {}
         group_properties:
           type: array
           items:
-            $ref: "#/components/schemas/GroupProperties"
+            $ref: '#/components/schemas/GroupProperties'
     SubscriptionCreateInput:
       type: object
       properties:
         subscription:
-          $ref: "#/components/schemas/SubscriptionCreateInputObject"
+          $ref: '#/components/schemas/SubscriptionCreateInputObject'
     SubscriptionCreateInputObject:
       type: object
       properties:
@@ -2770,14 +2770,14 @@ components:
         external_id:
           type: string
         billing_time:
-          $ref: "#/components/schemas/BillingTime"
+          $ref: '#/components/schemas/BillingTime'
         subscription_at:
           type: string
     SubscriptionUpdateInput:
       type: object
       properties:
         subscription:
-          $ref: "#/components/schemas/SubscriptionUpdateInputObject"
+          $ref: '#/components/schemas/SubscriptionUpdateInputObject'
     SubscriptionUpdateInputObject:
       type: object
       properties:
@@ -2791,12 +2791,12 @@ components:
         subscriptions:
           type: array
           items:
-            $ref: "#/components/schemas/SubscriptionObject"
+            $ref: '#/components/schemas/SubscriptionObject'
     Subscription:
       type: object
       properties:
         subscription:
-          $ref: "#/components/schemas/SubscriptionObject"
+          $ref: '#/components/schemas/SubscriptionObject'
     SubscriptionObject:
       type: object
       properties:
@@ -2813,9 +2813,9 @@ components:
         plan_code:
           type: string
         status:
-          $ref: "#/components/schemas/SubscriptionStatus"
+          $ref: '#/components/schemas/SubscriptionStatus'
         billing_time:
-          $ref: "#/components/schemas/BillingTime"
+          $ref: '#/components/schemas/BillingTime'
         subscription_at:
           type: string
         started_at:
@@ -2843,7 +2843,7 @@ components:
       type: object
       properties:
         wallet:
-          $ref: "#/components/schemas/WalletInputObject"
+          $ref: '#/components/schemas/WalletInputObject'
     WalletInputObject:
       type: object
       properties:
@@ -2868,7 +2868,7 @@ components:
       type: object
       properties:
         wallet:
-          $ref: "#/components/schemas/WalletUpdateInputObject"
+          $ref: '#/components/schemas/WalletUpdateInputObject'
     WalletUpdateInputObject:
       type: object
       properties:
@@ -2882,12 +2882,12 @@ components:
         wallets:
           type: array
           items:
-            $ref: "#/components/schemas/WalletObject"
+            $ref: '#/components/schemas/WalletObject'
     WalletTransactionInput:
       type: object
       properties:
         wallet_transaction:
-          $ref: "#/components/schemas/WalletTransactionInputObject"
+          $ref: '#/components/schemas/WalletTransactionInputObject'
     WalletTransactionInputObject:
       type: object
       properties:
@@ -2903,7 +2903,7 @@ components:
       type: object
       properties:
         wallet:
-          $ref: "#/components/schemas/WalletObject"
+          $ref: '#/components/schemas/WalletObject'
     WalletObject:
       type: object
       properties:
@@ -2914,7 +2914,7 @@ components:
         external_customer_id:
           type: string
         status:
-          $ref: "#/components/schemas/WalletStatus"
+          $ref: '#/components/schemas/WalletStatus'
         currency:
           type: string
         name:
@@ -2952,7 +2952,7 @@ components:
         wallet_transactions:
           type: array
           items:
-            $ref: "#/components/schemas/WalletTransactionObject"
+            $ref: '#/components/schemas/WalletTransactionObject'
     WalletTransactionObject:
       type: object
       properties:
@@ -2961,9 +2961,9 @@ components:
         lago_wallet_id:
           type: string
         status:
-          $ref: "#/components/schemas/TransactionStatus"
+          $ref: '#/components/schemas/TransactionStatus'
         transaction_type:
-          $ref: "#/components/schemas/TransactionType"
+          $ref: '#/components/schemas/TransactionType'
         amount:
           type: number
           format: double
